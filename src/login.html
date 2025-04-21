@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="./login.css">
+    <title>Medicare Pharmacy | Login</title>
+</head>
+<body class="m-0 p-0" style="background-image: url('./resource/login/signup_background.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
+
+    <!-- NAV BAR START -->
+    <nav class="p-3 flex bg-cyan-900 justify-items-center items-center sticky top-0 z-50">
+        <a href="#" id="brand" class="flex gap-2 items-center">
+            <img class="object-cover w-12 h-12" src="./resource/logo.png" alt="Medicare Pharmacy logo">
+            <span class="text-lg font-medium font-display text-white mr-52">Medicare Pharmacy</span>
+        </a>
+
+        <div id="nav-menue" class="hidden lg:flex gap-12">
+            <a href="#services" class="font-medium hover:text-cyan-500 text-white">Services</a>
+            <a href="#" class="font-medium hover:text-cyan-500 text-white">About Us</a>
+            <a href="#" class="font-medium hover:text-cyan-500 text-white">Contact</a>
+            <a href="#" class="font-medium hover:text-cyan-500 text-white">Help</a>
+            <a href="#" class="font-medium hover:text-cyan-500 text-white">Cart</a>
+        </div>
+
+        
+        <!-- <button class="hidden lg:flex gap-2 items-center border-2 border-gray-400 px-6 py-2 rounded-lg hover:border-gray-700">
+            <i class="fa-solid fa-user" style="color: #ffffff;"></i>
+            <span class="text-white">Login/Signup</span>
+            <i class="fa-solid fa-arrow-right text-white"></i>
+        </button>
+
+        <button class="p-2 lg:hidden" onclick="handleMenu()">
+            <i class="fa-solid fa-bars text-gray-600"></i>
+        </button>
+ -->
+
+
+        
+    </nav>
+    <!-- NAV BAR END -->
+
+
+
+    <!-- Login Section Start -->
+    <div class="flex items-center justify-center h-screen">
+        <div style="background-image: url('./resource/login/sign-upbox.jpg'); background-size: cover; background-repeat: no-repeat;" 
+            class="text-center border-2 border-solid-[rgba(171,110,110,0.244)] w-[450px] h-[400px] bg-white/80 rounded-xl shadow-lg p-6">
+            <h1 class="text-2xl font-bold mb-4 text-[rgb(0,255,255)]">Log in to Medicare Pharmacy</h1>
+
+            <form>
+                <input class=" w-[250px] h-[35px] p-3 mb-[20px] border-[1px] border-solid rounded-2xl focus:outline-none focus:ring-2 focus:ring-cyan-400 bg-white" type="text" required placeholder="Username" name="username">
+
+                <input class="password w-[250px] h-[35px] p-3 mb-[20px]border[1px]  rounded-2xl focus:outline-none focus:ring-2 focus:ring-cyan-400 bg-white " type="password" required placeholder="Password" name="password">
+
+                <div id="asb" class="flex items-center justify-center spa mb-4 mt-3 ">
+                    <div class="flex items-center">
+                        <input type="checkbox" id="remember" class="mr-2">
+                        <label for="remember" class="text-white">Remember me</label>
+                    </div>
+                    <a class="links text-[rgb(0,255,255)] hover:underline text-sm ml-4" href="#">Forgot password?</a>
+                </div>
+
+
+                <input class="login w-[150px] h[35px] bg-[rgb(0,255,255)] text-black py-2 rounded-2xl hover:bg-cyan-600 cursor-pointer" type="submit" value="Login">
+
+                <p class="text-white  mt-4">Don't have an account? <a class="links text-[rgb(0,255,255)] hover:underline ml-3" href="signup.html">Sign up</a></p>
+            </form>
+        </div>
+    </div>
+    <!-- Login Section End -->
+
+    <!-- Footer Start -->
+    <footer class="bg-cyan-900 text-white">
+        <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            <!-- Brand -->
+            <div>
+                <h2 class="text-2xl font-bold mb-2">Medicare Pharmacy</h2>
+                <p class="text-sm text-gray-400">Your trusted partner in health and wellness.</p>
+            </div>
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-lg font-semibold mb-3">Quick Links</h3>
+                <ul class="space-y-2 text-sm text-gray-300">
+                    <li><a href="#" class="hover:text-white">Home</a></li>
+                    <li><a href="#" class="hover:text-white">Shop</a></li>
+                    <li><a href="#" class="hover:text-white">About Us</a></li>
+                    <li><a href="#" class="hover:text-white">Contact</a></li>
+                </ul>
+            </div>
+            <!-- Services -->
+            <div>
+                <h3 class="text-lg font-semibold mb-3">Services</h3>
+                <ul class="space-y-2 text-sm text-gray-300">
+                    <li><a href="#" class="hover:text-white">Home Delivery</a></li>
+                    <li><a href="#" class="hover:text-white">Lab Tests</a></li>
+                    <li><a href="#" class="hover:text-white">Health Records</a></li>
+                    <li><a href="#" class="hover:text-white">Support</a></li>
+                </ul>
+            </div>
+            <!-- Contact Info -->
+            <div>
+                <h3 class="text-lg font-semibold mb-3">Contact</h3>
+                <p class="text-sm text-gray-300">123 Wellness Avenue<br> City, Country 12345</p>
+                <p class="text-sm text-gray-300 mt-2">Email: support@medicare.com</p>
+                <p class="text-sm text-gray-300">Phone: +1 (800) 123-4567</p>
+                <!-- Social Icons -->
+                <div class="flex gap-4 mt-4">
+                    <a href="#" class="hover:text-blue-400"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="hover:text-pink-400"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Bar -->
+        <div class="bg-gray-800 text-center py-4 text-sm text-gray-400">
+            &copy; 2025 Medicare Pharmacy. All rights reserved.
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+</body>
+
+<script src="script.js"></script>
+
+</html>
