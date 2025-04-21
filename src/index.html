@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="./output.css">
+  <title>PHARMACY WEBSITE</title>
+</head>
+
+<body class="m-0 p-0">
+
+  <!-- NAV BAR START -->
+  <nav class="p-3 flex bg-cyan-900 justify-between items-center position-sticky">
+    <a href="#" id="brand" class="flex gap-2 items-center">
+      <img class="object-cover w-12 h-12" src="./resource/logo.png" alt="Medicare Pharmacy logo">
+      <span class="text-lg font-medium font-display text-white">Medicare Pharmacy</span>
+    </a>
+
+    <div id="nav-menue" class="hidden lg:flex gap-12">
+      <a href="#services" class="font-medium hover:text-cyan-500 text-white ">Services</a>
+      <a href="#" class="font-medium hover:text-cyan-500 text-white">About Us</a>
+      <a href="#" class="font-medium hover:text-cyan-500 text-white">Contact</a>
+      <a href="#" class="font-medium hover:text-cyan-500 text-white">Help</a>
+      <a href="#" class="font-medium hover:text-cyan-500 text-white">Cart</a>
+    </div>
+
+    <button onclick="goToLoginPage()" class="hidden lg:flex gap-2 items-center border-2 border-gray-400 px-6 py-2 rounded-lg hover:border-gray-700">
+      <!-- <img class="object-cover w-5 h-5" src="./resource/account.png" alt="Account icon"> -->
+      <i class="fa-solid fa-user" style="color: #ffffff;"></i>
+      <span class="text-white">Login/Signup</span>
+      <i class="fa-solid fa-arrow-right text-white"></i>
+    </button>
+
+    <button class="p-2 lg:hidden" onclick="handleMenu()">
+      <i class="fa-solid fa-bars text-gray-600"></i>
+    </button>
+
+    <div id="nav-dialog" class="hidden fixed z-10 md:hidden bg-white inset-0 p-3">
+      <div class="flex justify-between">
+        <a href="#" id="brand-mobile" class="flex gap-2 items-center">
+          <img class="object-cover w-12 h-12" src="./resource/logo.png" alt="Medicare Pharmacy logo">
+          <span class="text-lg font-medium font-display text-white">Medicare Pharmacy</span>
+        </a>
+        <button class="p-2 md:hidden" onclick="handleMenu()">
+          <i class="fa-solid fa-xmark text-gray-600"></i>
+        </button>
+      </div>
+
+      <div class="mt-6 space-y-3">
+        <a href="#" class="font-medium p-3 hover:bg-gray-100 block rounded-lg text-white">Services</a>
+        <a href="#" class="font-medium p-3 hover:bg-gray-100 block rounded-lg text-white">About Us</a>
+        <a href="#" class="font-medium p-3 hover:bg-gray-100 block rounded-lg text-white">Contact</a>
+        <a href="#" class="font-medium p-3 hover:bg-gray-100 block rounded-lg text-white">Help</a>
+        <a href="#" class="font-medium p-3 hover:bg-gray-100 block rounded-lg text-white">Cart</a>
+      </div>
+
+      <div class="h-px bg-gray-300 my-4"></div>
+
+      <button onclick="goToLoginPage()"  class="w-full flex gap-2 items-center px-6 py-2 rounded-lg hover:bg-gray-100">
+        <img class="object-cover w-5 h-5" src="./resource/account.png" alt="Account icon">
+        <span class=" text-white">Login/Signup</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Search Bar -->
+  <div class="relative w-full h-32 flex items-center justify-center bg-gray-900">
+    <img alt="Search background" class="absolute inset-0 w-full h-full object-cover opacity-50" src="./resource/seracbar image.jpg" />
+    <div class="relative z-10 text-white text-center">
+      <h1 class="text-xl font-semibold">Search Medicines / General Products</h1>
+      <div class="relative w-full max-w-sm mt-4">
+        <input type="text" placeholder="Search...Medicines" class="w-full pl-10 pr-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-gray-600" />
+        <div class="absolute left-3 top-1/2 transform -translate-y-1/2 text-white">
+          <i class="fas fa-search"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Carousel -->
+  <div class="w-full overflow-hidden shadow-lg relative">
+    <div id="slider" class="flex transition-transform duration-700 ease-in-out">
+      <img src="./resource/slideImg1.jpg" class="w-full flex-shrink-0 object-cover" />
+      <img src="./resource/slideImg2.jpg" class="w-full flex-shrink-0 object-cover" />
+      <img src="./resource/slideImg3.jpg" class="w-full flex-shrink-0 object-cover" />
+      <img src="./resource/slideImg4.jpg" class="w-full flex-shrink-0 object-cover" />
+    </div>
+  </div>
+
+  <!-- Card Section -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto pt-10">
+    <!-- Cards -->
+    <a href="order-medicines.html" class="transform hover:scale-105 transition duration-300">
+      <div class="bg-[rgb(207,255,234)] rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row items-center justify-between p-6">
+        <div>
+          <h2 class="text-xl font-semibold text-gray-700 mb-4">Order Medicines</h2>
+          <button class="bg-emerald-500 text-white px-4 py-2 rounded hover:bg-emerald-600 transition">Order Now</button>
+        </div>
+        <img src="./resource/medicines.png" alt="Medicines" class="w-32 md:w-36 mt-4 md:mt-0" />
+      </div>
+    </a>
+
+    <a href="healthcare-products.html" class="transform hover:scale-105 transition duration-300">
+      <div class="bg-[rgb(207,255,234)] rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row items-center justify-between p-6">
+        <div>
+          <h2 class="text-xl font-semibold text-gray-700 mb-4">Healthcare Products</h2>
+          <button class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition">Order Now</button>
+        </div>
+        <img src="./resource/healthcare.png" alt="Products" class="w-32 md:w-36 mt-4 md:mt-0" />
+      </div>
+    </a>
+
+    <a href="lab-tests.html" class="transform hover:scale-105 transition duration-300">
+      <div class="bg-[rgb(207,255,234)] rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row items-center justify-between p-6">
+        <div>
+          <h2 class="text-xl font-semibold text-gray-700 mb-4">Lab Tests</h2>
+          <button class="bg-cyan-500 text-white px-4 py-2 rounded hover:bg-cyan-600 transition">Book Now</button>
+        </div>
+        <img src="./resource/doctor.png" alt="Doctor" class="w-32 md:w-36 mt-4 md:mt-0" />
+      </div>
+    </a>
+  </div>
+
+  <!-- Offer Banner -->
+  <div class="bg-purple-400 w-[83vw] h-[165px] mx-auto mt-6 p-4 rounded-lg flex flex-col md:flex-row items-center justify-between shadow-lg transform hover:scale-105 transition duration-300">
+    <div class="text-center md:text-left">
+      <img class="w-12 h-12" src="./resource/logo.png" alt="Medicare Pharmacy logo">
+      <span class="text-2xl font-bold text-white">Medicare Pharmacy</span>
+    </div>
+    <p class="text-lg font-medium text-white mt-2 truncate">Save flat 5% extra on medicines & enjoy FREE delivery with PLUS membership.</p>
+    <img src="./resource/stripPic2.png" alt="Promotional Image" class="w-20 h-20 md:w-24 md:h-24 object-contain">
+  </div>
+
+  <!-- Featured Brands Section -->
+  <div class="mt-8 p-6 bg-gray-100 rounded-lg shadow-md w-[83vw] mx-auto">
+    <h2 class="text-2xl font-bold">Featured Brands</h2>
+    <div class="relative">
+      <button id="left-arrow" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-400 text-white p-2 rounded-full hover:bg-gray-500 z-10">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <div id="slider2" class="flex overflow-hidden scroll-smooth space-x-6 py-4 px-2 scrollbar-hide">
+        <!-- Brand Images -->
+        <!-- ... your brand images here ... -->
+        
+        <img src="./resource/brand-cipla(1).png" alt="Cipla Image"
+          class="min-w-[150px] h-40 object-contain hover:scale-105 transition-transform duration-300 rounded-lg" />
+        <img src="./resource/brand vix.png" alt="Vix Image"
+          class="min-w-[150px] h-40 object-contain hover:scale-105 transition-transform duration-300 rounded-lg" />
+          <img src="./resource/brand-horlics.png" alt="Horlics Image"
+          class="min-w-[150px] h-40 object-contain hover:scale-105 transition-transform duration-300 rounded-lg" />
+          <img src="./resource/brand-cipla(1).png" alt="Cipla Image"
+            class="min-w-[150px] h-40 object-contain hover:scale-105 transition-transform duration-300 rounded-lg" />
+          <img src="./resource/brand vix.png" alt="Vix Image"
+            class="min-w-[150px] h-40 object-contain hover:scale-105 transition-transform duration-300 rounded-lg" />
+        <img src="./resource/brand-horlics2.png" alt="Horlics 2 Image"
+          class="min-w-[150px] h-40 object-contain hover:scale-105 transition-transform duration-300 rounded-lg" />
+        <img src="./resource/brand-jhonsons.png" alt="Johnson's Image"
+          class="min-w-[150px] h-40 object-contain hover:scale-105 transition-transform duration-300 rounded-lg" />
+        <img src="./resource/brand-cipla(1).png" alt="Cipla Image"
+          class="min-w-[150px] h-40 object-contain hover:scale-105 transition-transform duration-300 rounded-lg" />
+          <img src="./resource/brand-jhonsons.png" alt="Johnson's Image"
+          class="min-w-[150px] h-40 object-contain hover:scale-105 transition-transform duration-300 rounded-lg" />
+          <img src="./resource/brand-jhonsons.png" alt="Johnson's Image"
+            class="min-w-[150px] h-40 object-contain hover:scale-105 transition-transform duration-300 rounded-lg" />
+          <img src="./resource/brand-cipla(1).png" alt="Cipla Image"
+            class="min-w-[150px] h-40 object-contain hover:scale-105 transition-transform duration-300 rounded-lg" />
+        <img src="./resource/brand-cipla(1).png" alt="Cipla Image"
+          class="min-w-[150px] h-40 object-contain hover:scale-105 transition-transform duration-300 rounded-lg" />
+        <img src="./resource/brand vix.png" alt="Vix Image"
+          class="min-w-[150px] h-40 object-contain hover:scale-105 transition-transform duration-300 rounded-lg" />
+          <img src="./resource/brand-horlics.png" alt="Horlics Image"
+          class="min-w-[150px] h-40 object-contain hover:scale-105 transition-transform duration-300 rounded-lg" />
+          <img src="./resource/brand-cipla(1).png" alt="Cipla Image"
+            class="min-w-[150px] h-40 object-contain hover:scale-105 transition-transform duration-300 rounded-lg" />
+          <img src="./resource/brand vix.png" alt="Vix Image"
+            class="min-w-[150px] h-40 object-contain hover:scale-105 transition-transform duration-300 rounded-lg" />
+        <img src="./resource/brand-horlics2.png" alt="Horlics 2 Image"
+          class="min-w-[150px] h-40 object-contain hover:scale-105 transition-transform duration-300 rounded-lg" />
+        <img src="./resource/brand-jhonsons.png" alt="Johnson's Image"
+          class="min-w-[150px] h-40 object-contain hover:scale-105 transition-transform duration-300 rounded-lg" />
+        <img src="./resource/brand-cipla(1).png" alt="Cipla Image"
+          class="min-w-[150px] h-40 object-contain hover:scale-105 transition-transform duration-300 rounded-lg" />
+          <img src="./resource/brand-jhonsons.png" alt="Johnson's Image"
+          class="min-w-[150px] h-40 object-contain hover:scale-105 transition-transform duration-300 rounded-lg" />
+          <img src="./resource/brand-jhonsons.png" alt="Johnson's Image"
+            class="min-w-[150px] h-40 object-contain hover:scale-105 transition-transform duration-300 rounded-lg" />
+          <img src="./resource/brand-cipla(1).png" alt="Cipla Image"
+            class="min-w-[150px] h-40 object-contain hover:scale-105 transition-transform duration-300 rounded-lg" />
+       
+
+             <!-- brand image end  -->
+      </div>
+
+
+      <!-- feature brand section END  -->
+      <button id="right-arrow" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-400 text-white p-2 rounded-full hover:bg-gray-500 z-10">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer Banner -->
+  <div class="w-full h-auto mt-8">
+    <img src="./resource/banner 4 nivia.jpg" alt="Nivia banner" class="object-cover w-full h-auto rounded-lg shadow-md" />
+  </div>
+
+  
+  <!-- ending start -->
+  <div class="mt-8 bg-cover bg-center bg-no-repeat h-80" style="background-image: url('./resource/services-we-offer.png');">
+    <div class=" bg-opacity-60 h-full w-full flex flex-col justify-center px-8 py-6">
+      
+      <!-- Title -->
+      <h2 class="text-black text-3xl font-bold mb-6">Why Medicare Pharmacy</h2>
+      
+      <!-- Grid Cards -->
+      <div class="grid grid-cols-4 gap-4 text-white">
+  
+        <!-- Card 1 -->
+        <div class="flex flex-col items-center text-center">
+          <div class="w-[54px] h-[54px] bg-white rounded-full flex items-center justify-center shadow-md mb-2">
+            <img src="./resource/safe-and-secure.svg" alt="Safe & Secure" class="w-[32px] h-[32px]">
+          </div>
+          <h6 class="text-xl font-bold text-black">100% Safe & Secure</h6>
+          <p class="text-sm text-black max-w-[200px]">We take all safety and hygiene measures to keep our customers safe.</p>
+        </div>
+  
+        <!-- Card 2 -->
+        <div class="flex flex-col items-center text-center">
+          <div class="w-[54px] h-[54px] bg-white rounded-full flex items-center justify-center shadow-md mb-2">
+            <img src="./resource/online-reports.svg" alt="Click and Pick" class="w-[32px] h-[32px]">
+          </div>
+          <h6 class="text-xl font-bold text-black">Click and Pick</h6>
+          <p class="text-sm text-black max-w-[200px]">Click to buy a range of products across categories.</p>
+        </div>
+  
+        <!-- Card 3 -->
+        <div class="flex flex-col items-center text-center">
+          <div class="w-[54px] h-[54px] bg-white rounded-full flex items-center justify-center shadow-md mb-2">
+            <img src="./resource/home-sample-collection.svg" alt="Home Delivery" class="w-[32px] h-[32px]">
+          </div>
+          <h6 class="text-xl font-bold text-black">Home Delivery</h6>
+          <p class="text-sm text-black max-w-[200px]">We offer convenient home delivery of medicines & general goods.</p>
+        </div>
+  
+        <!-- Card 4 -->
+        <div class="flex flex-col items-center text-center">
+          <div class="w-[54px] h-[54px] bg-white rounded-full flex items-center justify-center shadow-md mb-2">
+            <img src="./resource/compititive-prices.svg" alt="Health Records" class="w-[32px] h-[32px]">
+          </div>
+          <h6 class="text-xl font-bold text-black">Unlimited Health Records</h6>
+          <p class="text-sm text-black max-w-[200px]">Save all your health records (Medical Records...).</p>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  
+  <!-- ending close  -->
+
+
+  <!-- footer start -->
+
+  <footer class="bg-cyan-900 text-white mt-12">
+    <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      
+      <!-- Brand -->
+      <div>
+        <h2 class="text-2xl font-bold mb-2">Medicare Pharmacy</h2>
+        <p class="text-sm text-gray-400">Your trusted partner in health and wellness.</p>
+      </div>
+  
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-lg font-semibold mb-3">Quick Links</h3>
+        <ul class="space-y-2 text-sm text-gray-300">
+          <li><a href="#" class="hover:text-white">Home</a></li>
+          <li><a href="#" class="hover:text-white">Shop</a></li>
+          <li><a href="#" class="hover:text-white">About Us</a></li>
+          <li><a href="#" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Services -->
+      <div>
+        <h3 class="text-lg font-semibold mb-3">Services</h3>
+        <ul class="space-y-2 text-sm text-gray-300">
+          <li><a href="#" class="hover:text-white">Home Delivery</a></li>
+          <li><a href="#" class="hover:text-white">Lab Tests</a></li>
+          <li><a href="#" class="hover:text-white">Health Records</a></li>
+          <li><a href="#" class="hover:text-white">Support</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact Info -->
+      <div>
+        <h3 class="text-lg font-semibold mb-3">Contact</h3>
+        <p class="text-sm text-gray-300">123 Wellness Avenue<br> City, Country 12345</p>
+        <p class="text-sm text-gray-300 mt-2">Email: support@medicare.com</p>
+        <p class="text-sm text-gray-300">Phone: +1 (800) 123-4567</p>
+  
+        <!-- Social Icons -->
+        <div class="flex gap-4 mt-4">
+          <a href="#" class="hover:text-blue-400">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="hover:text-blue-400">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="hover:text-pink-400">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Bottom Bar -->
+    <div class="bg-gray-800 text-center py-4 text-sm text-gray-400">
+      &copy; 2025 Medicare Pharmacy. All rights reserved.
+    </div>
+  </footer>
+  
+
+
+ 
+</body>
+<script src="script.js"></script>
+
+</html>
