@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="./output.css">
+  <title>PHARMACY WEBSITE</title>
+  <style>
+    html {
+  scroll-behavior: smooth;
+}
+
+  </style>
+</head>
+
+<body class="m-0 p-0 bg-gradient-to-b from-blue-80 to-white text-gray-800">
+
+  <!-- NAV BAR START -->
+  <nav class="p-3 flex bg-cyan-900 justify-between items-center position-sticky">
+    <a href="#" id="brand" class="flex gap-2 items-center">
+      <img class="object-cover w-12 h-12" src="./resource/home/logo.png" alt="Medicare Pharmacy logo">
+      <span class="text-lg font-medium font-display text-white">Medicare Pharmacy</span>
+    </a>
+
+    <div id="nav-menue" class="hidden lg:flex gap-12">
+      <a href="./index.html" class="font-medium hover:text-cyan-500 text-white ">Home</a>
+      <a href="./index.html#services1" class="font-medium hover:text-cyan-500 text-white ">Services</a>
+      <a href="./AboutUs.html" class="font-medium hover:text-cyan-500 text-white">About Us</a>
+     
+      <a href="#" class="font-medium hover:text-cyan-500 text-white">Help</a>
+        <a href="./cart.html" class="font-medium hover:text-cyan-500 text-white"><i class="fa-solid fa-cart-plus fa-bounce" style="color: #ecf0f3;"></i></a>
+    </div>
+
+    <button onclick="goToLoginPage()" class="hidden lg:flex gap-2 items-center border-2 border-gray-400 px-6 py-2 rounded-lg hover:border-gray-700">
+      <!-- <img class="object-cover w-5 h-5" src="./resource/account.png" alt="Account icon"> -->
+      <i class="fa-solid fa-user" style="color: #ffffff;"></i>
+      <span class="text-white">Login/Signup</span>
+      <i class="fa-solid fa-arrow-right text-white"></i>
+    </button>
+
+     </nav>
+
+  <!-- Hero -->
+  <section class="bg-gray-50 py-16 text-center px-4">
+    <h2 class="text-4xl font-bold mb-4 text-green-700">Need Help?</h2>
+    <p class="text-lg text-gray-600 mb-6 max-w-xl mx-auto">
+      We’re here to support you with your orders, prescriptions, and more. Browse FAQs or reach out directly.
+    </p>
+    <input
+      type="text"
+      placeholder="Search help topics..."
+      class="w-full max-w-lg mx-auto p-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-green-400 outline-none"
+    />
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="max-w-3xl mx-auto px-4 py-12">
+    <h3 class="text-3xl font-semibold text-green-700 mb-6 text-center">Frequently Asked Questions</h3>
+    <div class="space-y-4" id="faq">
+
+      <!-- FAQ Item -->
+      <div class="bg-white shadow-md rounded-xl p-5">
+        <button class="faq-toggle w-full text-left text-lg font-medium flex justify-between items-center">
+          💊 How do I order a prescription online?
+          <span class="text-gray-400">+</span>
+        </button>
+        <div class="faq-content mt-3 text-gray-600 hidden">
+          Upload your prescription on our homepage, select the medicines you need, and proceed to checkout.
+        </div>
+      </div>
+
+
+      <div class="bg-white shadow-md rounded-xl p-5">
+        <button class="faq-toggle w-full text-left text-lg font-medium flex justify-between items-center">
+          🚚 What are the delivery charges and time?
+          <span class="text-gray-400">+</span>
+        </button>
+        <div class="faq-content mt-3 text-gray-600 hidden">
+          Free delivery on orders over ₹500. Delivery within 1–2 business days.
+        </div>
+      </div>
+
+
+      <div class="bg-white shadow-md rounded-xl p-5">
+        <button class="faq-toggle w-full text-left text-lg font-medium flex justify-between items-center">
+          📞 How do I contact customer service?
+          <span class="text-gray-400">+</span>
+        </button>
+        <div class="faq-content mt-3 text-gray-600 hidden">
+          Call us at 1800-123-4567 or email us at support@pharmacare.com. We respond within 24 hours.
+        </div>
+      </div>
+
+      
+
+      
+      <div class="bg-white shadow-md rounded-xl p-5">
+        <button class="faq-toggle w-full text-left text-lg font-medium flex justify-between items-center">
+            💊 How to order medicines online from Medicare Pharmacy?
+          <span class="text-gray-400">+</span>
+        </button>
+        <div class="faq-content mt-3 text-gray-600 hidden">
+          You can brouse our available medicines, add them to your cart, and complite the checkout process.Our easy-to-use platform ensures a smooth ordering experience.
+        </div>
+      </div>
+
+      
+
+      <div class="bg-white shadow-md rounded-xl p-5">
+        <button class="faq-toggle w-full text-left text-lg font-medium flex justify-between items-center">
+            🛡️ Is online medicine delivery safe?
+          <span class="text-gray-400">+</span>
+        </button>
+        <div class="faq-content mt-3 text-gray-600 hidden">
+          Yes,Medicare Pharmacy ensures secure pakaging and delivery to gurantee the saftey and quality of your medicines.
+        </div>
+      </div>
+
+      
+
+      <div class="bg-white shadow-md rounded-xl p-5">
+        <button class="faq-toggle w-full text-left text-lg font-medium flex justify-between items-center">
+            📦 How do I know if there is a delay in delivery?
+          <span class="text-gray-400">+</span>
+        </button>
+        <div class="faq-content mt-3 text-gray-600 hidden">
+         If there is any delay,you will receive updates via email or SMS You can also track your order status on our website.
+        </div>
+      </div>
+
+      
+
+      <div class="bg-white shadow-md rounded-xl p-5">
+        <button class="faq-toggle w-full text-left text-lg font-medium flex justify-between items-center">
+            🚚 can Medicare Pharmacy provide Express delivery ?
+          <span class="text-gray-400">+</span>
+        </button>
+        <div class="faq-content mt-3 text-gray-600 hidden">
+         Yes,express delivery is avilable for selected location.Plese check at the time of checkout for availability.
+        </div>
+      </div>
+
+      
+
+      <div class="bg-white shadow-md rounded-xl p-5">
+        <button class="faq-toggle w-full text-left text-lg font-medium flex justify-between items-center">
+            📦 How can i buy Medicare Pharmacy product?
+          <span class="text-gray-400">+</span>
+        </button>
+        <div class="faq-content mt-3 text-gray-600 hidden">
+         You can purchase product online by brousing our website or visiting one of our pharmacy store.
+        </div>
+      </div>
+
+      
+
+      <div class="bg-white shadow-md rounded-xl p-5">
+        <button class="faq-toggle w-full text-left text-lg font-medium flex justify-between items-center">
+            📍 Can I track the delivery status of my order? If yes, how??
+          <span class="text-gray-400">+</span>
+        </button>
+        <div class="faq-content mt-3 text-gray-600 hidden">
+            Yes, you can track your order status using the tracking link sent to your email or SMS after the order is confirmed.
+        </div>
+      </div>
+
+      
+
+      <div class="bg-white shadow-md rounded-xl p-5">
+        <button class="faq-toggle w-full text-left text-lg font-medium flex justify-between items-center">
+            🚚 Does MediCare Pharmacy provide home delivery of medicines?
+          <span class="text-gray-400">+</span>
+        </button>
+        <div class="faq-content mt-3 text-gray-600 hidden">
+            Yes, we offer home delivery for all eligible orders to make it convenient for you..
+        </div>
+      </div>
+
+      
+
+      <div class="bg-white shadow-md rounded-xl p-5">
+        <button class="faq-toggle w-full text-left text-lg font-medium flex justify-between items-center">
+            🚚 Does MediCare Pharmacy provide same-day delivery of online medicine orders??
+          <span class="text-gray-400">+</span>
+        </button>
+        <div class="faq-content mt-3 text-gray-600 hidden">
+            Same-day delivery is available in select locations. Check the options during checkout for more details.
+        </div>
+      </div>
+
+      
+
+
+    </div>
+  </section>
+
+ <!-- contact section  -->
+
+ <section id="contact" class="bg-gray-100 py-16 px-6">
+      <div class="max-w-md mx-auto">
+        <div class="bg-white shadow-lg rounded-2xl p-8">
+          <h2 class="text-3xl font-bold text-green-700 mb-4 text-center">Contact Us</h2>
+          <p class="text-gray-600 text-center mb-6">
+            We’d love to hear from you! Reach out to us for any inquiries, support, or feedback.
+          </p>
+    
+          <div class="space-y-4 text-gray-700 text-sm">
+            <p>
+              <span class="font-semibold text-green-600">📧 Email:</span>
+              <a href="mailto:support@medicarepharmacy.com" class="text-blue-600 hover:underline ml-1">
+                support@medicarepharmacy.com
+              </a>
+            </p>
+            <p>
+              <span class="font-semibold text-green-600">📞 Phone:</span>
+              <a href="tel:+9198610200312601" class="text-blue-600 hover:underline ml-1">
+                +91 98326 97601
+              </a>
+            </p>
+            <p>
+              <span class="font-semibold text-green-600">📍 Address:</span>
+              <span class="ml-1">Garari, Mohobani, Paschim Mednipur, West Bengal, 721260</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+
+
+
+  <!-- Footer Start -->
+  <footer class="bg-cyan-900 text-white">
+      <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+          <!-- Brand -->
+          <div>
+              <h2 class="text-2xl font-bold mb-2">Medicare Pharmacy</h2>
+              <p class="text-sm text-gray-400">Your trusted partner in health and wellness.</p>
+          </div>
+          <!-- Quick Links -->
+          <div>
+              <h3 class="text-lg font-semibold mb-3">Quick Links</h3>
+              <ul class="space-y-2 text-sm text-gray-300">
+                  <li><a href="#" class="hover:text-white">Home</a></li>
+                  <li><a href="#" class="hover:text-white">Shop</a></li>
+                  <li><a href="#" class="hover:text-white">About Us</a></li>
+                  <li><a href="#" class="hover:text-white">Contact</a></li>
+              </ul>
+          </div>
+          <!-- Services -->
+          <div>
+              <h3 class="text-lg font-semibold mb-3">Services</h3>
+              <ul class="space-y-2 text-sm text-gray-300">
+                  <li><a href="#" class="hover:text-white">Home Delivery</a></li>
+                  <li><a href="#" class="hover:text-white">Lab Tests</a></li>
+                  <li><a href="#" class="hover:text-white">Health Records</a></li>
+                  <li><a href="#" class="hover:text-white">Support</a></li>
+              </ul>
+          </div>
+          <!-- Contact Info -->
+          <div>
+              <h3 class="text-lg font-semibold mb-3">Contact</h3>
+              <p class="text-sm text-gray-300">123 Wellness Avenue<br> City, Country 12345</p>
+              <p class="text-sm text-gray-300 mt-2">Email: support@medicare.com</p>
+              <p class="text-sm text-gray-300">Phone: +1 (800) 123-4567</p>
+              <!-- Social Icons -->
+              <div class="flex gap-4 mt-4">
+                  <a href="#" class="hover:text-blue-400"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+                  <a href="#" class="hover:text-pink-400"><i class="fab fa-instagram"></i></a>
+              </div>
+          </div>
+      </div>
+      <!-- Bottom Bar -->
+      <div class="bg-gray-800 text-center py-4 text-sm text-gray-400">
+          &copy; 2025 Medicare Pharmacy. All rights reserved.
+      </div>
+  </footer>
+  <!-- Footer End -->
+
+
+  <!-- Accordion JS -->
+  <script>
+    const toggles = document.querySelectorAll('.faq-toggle');
+
+    toggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const content = toggle.nextElementSibling;
+        content.classList.toggle('hidden');
+        const symbol = toggle.querySelector('span');
+        symbol.textContent = content.classList.contains('hidden') ? '+' : '–';
+      });
+    });
+  </script>
+
+</body>
+<script src="./script.js"></script>
+</html>

@@ -7,6 +7,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <link rel="stylesheet" href="./output.css">
   <title>PHARMACY WEBSITE</title>
+  <style>
+    html {
+  scroll-behavior: smooth;
+}
+
+  </style>
 </head>
 
 <body class="m-0 p-0">
@@ -19,19 +25,28 @@
     </a>
 
     <div id="nav-menue" class="hidden lg:flex gap-12">
-      <a href="#services" class="font-medium hover:text-cyan-500 text-white ">Services</a>
-      <a href="#" class="font-medium hover:text-cyan-500 text-white">About Us</a>
-      <a href="#" class="font-medium hover:text-cyan-500 text-white">Contact</a>
-      <a href="#" class="font-medium hover:text-cyan-500 text-white">Help</a>
-      <a href="#" class="font-medium hover:text-cyan-500 text-white">Cart</a>
+      <a href="./index.html" class="font-medium hover:text-cyan-500 text-white ">Home</a>
+      <a href="#services1" class="font-medium hover:text-cyan-500 text-white ">Services</a>
+      <a href="./AboutUs.html" class="font-medium hover:text-cyan-500 text-white">About Us</a>
+     
+      <a href="./help.html" class="font-medium hover:text-cyan-500 text-white">Help</a>
+      <a href="./cart.html" class="font-medium hover:text-cyan-500 text-white"><i class="fa-solid fa-cart-plus fa-bounce" style="color: #ecf0f3;"></i></a>
     </div>
 
+    <div id="auth-buttons" class="flex space-x-4">  
     <button onclick="goToLoginPage()" class="hidden lg:flex gap-2 items-center border-2 border-gray-400 px-6 py-2 rounded-lg hover:border-gray-700">
       <!-- <img class="object-cover w-5 h-5" src="./resource/account.png" alt="Account icon"> -->
       <i class="fa-solid fa-user" style="color: #ffffff;"></i>
       <span class="text-white">Login/Signup</span>
       <i class="fa-solid fa-arrow-right text-white"></i>
     </button>
+    </div>
+
+    <div id="user-buttons" class="hidden flex space-x-4 items-center">
+  <a href="./profile.html" class="text-white font-semibold"><i class="fa-solid fa-user fa-lg" style="color: #d5dae1;"></i> Profile</a>
+  </div>
+
+    <!-- nav for small device  -->
 
     <button class="p-2 lg:hidden" onclick="handleMenu()">
       <i class="fa-solid fa-bars text-gray-600"></i>
@@ -49,9 +64,9 @@
       </div>
 
       <div class="mt-6 space-y-3">
+        <a href="#" class="font-medium p-3 hover:bg-gray-100 block rounded-lg text-white">Home</a>
         <a href="#" class="font-medium p-3 hover:bg-gray-100 block rounded-lg text-white">Services</a>
         <a href="#" class="font-medium p-3 hover:bg-gray-100 block rounded-lg text-white">About Us</a>
-        <a href="#" class="font-medium p-3 hover:bg-gray-100 block rounded-lg text-white">Contact</a>
         <a href="#" class="font-medium p-3 hover:bg-gray-100 block rounded-lg text-white">Help</a>
         <a href="#" class="font-medium p-3 hover:bg-gray-100 block rounded-lg text-white">Cart</a>
       </div>
@@ -72,7 +87,7 @@
     <div class="relative z-10 text-white text-center">
       <h1 class="text-xl font-semibold">Search Medicines / General Products</h1>
       <div class="relative w-full max-w-sm mt-4">
-        <input type="text" placeholder="Search...Medicines" class="w-full pl-10 pr-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-gray-600" />
+        <input  id="searchInput"  type="text" placeholder="Search...Medicines" class="w-full pl-10 pr-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-gray-600" />
         <div class="absolute left-3 top-1/2 transform -translate-y-1/2 text-white">
           <i class="fas fa-search"></i>
         </div>
@@ -91,9 +106,10 @@
   </div>
 
   <!-- Card Section -->
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto pt-10">
+  
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto pt-10" >
     <!-- Cards -->
-    <a href="order-medicines.html" class="transform hover:scale-105 transition duration-300">
+    <a href="./medicine.html" class="transform hover:scale-105 transition duration-300">
       <div class="bg-[rgb(207,255,234)] rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row items-center justify-between p-6">
         <div>
           <h2 class="text-xl font-semibold text-gray-700 mb-4">Order Medicines</h2>
@@ -103,7 +119,7 @@
       </div>
     </a>
 
-    <a href="healthcare-products.html" class="transform hover:scale-105 transition duration-300">
+    <a href="./healthcareproduct.html" class="transform hover:scale-105 transition duration-300">
       <div class="bg-[rgb(207,255,234)] rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row items-center justify-between p-6">
         <div>
           <h2 class="text-xl font-semibold text-gray-700 mb-4">Healthcare Products</h2>
@@ -123,6 +139,9 @@
       </div>
     </a>
   </div>
+
+
+<!-- card section end  -->
 
   <!-- Offer Banner -->
   <div class="bg-purple-400 w-[83vw] h-[165px] mx-auto mt-6 p-4 rounded-lg flex flex-col md:flex-row items-center justify-between shadow-lg transform hover:scale-105 transition duration-300">
@@ -202,12 +221,12 @@
     </div>
   </div>
 
-  <!-- Footer Banner -->
+  <!-- last Banner -->
   <div class="w-full h-auto mt-8">
     <img src="./resource/home/banner 4 nivia.jpg" alt="Nivia banner" class="object-cover w-full h-auto rounded-lg shadow-md" />
   </div>
 
-  
+  <section id="services1" >
   <!-- ending start -->
   <div class="mt-8 bg-cover bg-center bg-no-repeat h-80" style="background-image: url('./resource/home/services-we-offer.png');">
     <div class=" bg-opacity-60 h-full w-full flex flex-col justify-center px-8 py-6">
@@ -258,6 +277,7 @@
     </div>
   </div>
   
+   </section>
   <!-- ending close  -->
 
 
@@ -276,9 +296,9 @@
       <div>
         <h3 class="text-lg font-semibold mb-3">Quick Links</h3>
         <ul class="space-y-2 text-sm text-gray-300">
-          <li><a href="#" class="hover:text-white">Home</a></li>
+          <li><a href="./index.html" class="hover:text-white">Home</a></li>
           <li><a href="#" class="hover:text-white">Shop</a></li>
-          <li><a href="#" class="hover:text-white">About Us</a></li>
+          <li><a href="./AboutUs.html" class="hover:text-white">About Us</a></li>
           <li><a href="#" class="hover:text-white">Contact</a></li>
         </ul>
       </div>

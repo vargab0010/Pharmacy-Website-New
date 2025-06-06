@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="./output.css">
+  <title>PHARMACY WEBSITE</title>
+  <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Custom font for the quote icon to match the style */
+    .quote-icon {
+      font-size: 3.5rem;
+      color: #d1d5db; /* Tailwind gray-300 */
+      line-height: 1;
+    }
+  </style>
+</head>
+
+<body class="m-0 p-0 bg-gradient-to-b from-blue-50 to-white text-gray-800">
+
+  <!-- NAV BAR START -->
+  <nav class="p-3 flex bg-cyan-900 justify-between items-center position-sticky">
+    <a href="#" id="brand" class="flex gap-2 items-center">
+      <img class="object-cover w-12 h-12" src="./resource/home/logo.png" alt="Medicare Pharmacy logo">
+      <span class="text-lg font-medium font-display text-white">Medicare Pharmacy</span>
+    </a>
+
+    <div id="nav-menue" class="hidden lg:flex gap-12">
+      <a href="./index.html" class="font-medium hover:text-cyan-500 text-white ">Home</a>
+      <a href="./index.html#services1" class="font-medium hover:text-cyan-500 text-white ">Services</a>
+      <a href="./AboutUs.html" class="font-medium hover:text-cyan-500 text-white">About Us</a>
+      <a href="./help.html" class="font-medium hover:text-cyan-500 text-white">Help</a>
+       <a href="./cart.html" class="font-medium hover:text-cyan-500 text-white"><i class="fa-solid fa-cart-plus fa-bounce" style="color: #ecf0f3;"></i></a>
+    </div>
+
+    <button onclick="goToLoginPage()" class="hidden lg:flex gap-2 items-center border-2 border-gray-400 px-6 py-2 rounded-lg hover:border-gray-700">
+      <!-- <img class="object-cover w-5 h-5" src="./resource/account.png" alt="Account icon"> -->
+      <i class="fa-solid fa-user" style="color: #ffffff;"></i>
+      <span class="text-white">Login/Signup</span>
+      <i class="fa-solid fa-arrow-right text-white"></i>
+    </button>
+     </nav>
+
+     <!-- content start  -->
+    
+  <!-- About Section -->
+  <section class="max-w-6xl mx-auto p-8 fade-in" id="about-section">
+    <h2 class="text-3xl font-bold text-blue-700 mb-4">About Us</h2>
+    <p class="text-lg mb-6">
+      Welcome to <strong>Medicare pharmacy</strong>,your trusted partner in health and wellness.  we’re dedicated to providing high-quality medications and healthcare services with convenience and care. Founded in 2010, our mission has always been to make essential medicines and wellness products accessible, affordable, and safe for everyone.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Mission -->
+      <div class="bg-white p-6 rounded-2xl shadow fade-in">
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">Our Mission</h3>
+        <p>
+          To empower healthier lives by delivering trusted medicines, expert support, and reliable service across every neighborhood and home.
+        </p>
+      </div>
+
+      <!-- Vision -->
+      <div class="bg-white p-6 rounded-2xl shadow fade-in">
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">Our Vision</h3>
+        <p>
+          To become the most trusted name in digital healthcare, setting new standards in customer service and medication safety.
+        </p>
+      </div>
+
+      <!-- Our Services -->
+      <div class="bg-white p-6 rounded-2xl shadow md:col-span-2 fade-in">
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">What We Offer</h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li>Prescription and OTC Medicines</li>
+          <li>Online Consultation with Licensed Pharmacists</li>
+          <li>Doorstep Delivery</li>
+          <li>Health & Wellness Products</li>
+          <li>Easy Prescription Upload</li>
+        </ul>
+      </div>
+
+      <!-- Team -->
+      <div class="bg-white p-6 rounded-2xl shadow md:col-span-2 fade-in">
+        <h3 class="text-xl font-semibold text-blue-600 mb-4">Meet Our Team</h3>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div class="text-center">
+            <img src="./resource/about/pharmacist.jpeg" alt="Pharmacist" class="mx-auto rounded-full mb-2 h-[200px] w-[200px]">
+            <h4 class="font-medium">Dr.XX</h4>
+            <p class="text-sm text-gray-600">Chief Pharmacist</p>
+          </div>
+          <div class="text-center">
+            <img src="./resource/about/operationmanager.jpeg" alt="Team Member" class="mx-auto rounded-full mb-2 h-[200px] w-[200px]">
+            <h4 class="font-medium">XY</h4>
+            <p class="text-sm text-gray-600">Operations Manager</p>
+          </div>
+          <div class="text-center">
+            <img src="./resource/about/customersupport.jpeg" alt="Team Member" class="mx-auto rounded-full mb-2 h-[200px] w-[200px]">
+            <h4 class="font-medium">XX</h4>
+            <p class="text-sm text-gray-600">Customer Support Lead</p>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+  </section>
+
+
+   <!-- Customer review  -->
+
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div class="flex items-center space-x-2 mb-8">
+     <img alt="Two customers smiling, one with a beard and glasses, the other with long hair and a green shirt" class="w-8 h-8 rounded-full" height="32" src="https://storage.googleapis.com/a1aa/image/090f75cc-8805-4101-a655-7b21fb6d7596.jpg" width="32"/>
+     <img alt="Two customers smiling, one with a beard and glasses, the other with long hair and a green shirt" class="w-8 h-8 rounded-full -ml-2 border-2 border-white" height="32" src="https://storage.googleapis.com/a1aa/image/090f75cc-8805-4101-a655-7b21fb6d7596.jpg" width="32"/>
+     <p class="text-gray-700 font-normal text-sm sm:text-base">
+      See What Our Customers Have to Say About Us
+     </p>
+    </div>
+    <div class="flex flex-col sm:flex-row sm:space-x-6 space-y-6 sm:space-y-0">
+     <div class="quote-icon hidden sm:block mr-4 select-none">
+      “
+     </div>
+     <div class="grid grid-cols-1 sm:grid-cols-4 gap-6 flex-1">
+      <div class="bg-white rounded-lg p-4 shadow-sm text-gray-600 text-xs sm:text-sm leading-relaxed">
+       <p class="font-semibold text-gray-900 text-sm mb-0.5">
+        Amit
+       </p>
+       <p class="text-gray-500 text-xs mb-2">
+        Kolkata
+       </p>
+       <p>
+        I recently tried the pharmeasy app for ordering my medicines and to
+             my surprise the delivery was very quick!!! . Also medicine was
+             packed and handled properly ....
+       </p>
+      </div>
+      <div class="bg-white rounded-lg p-4 shadow-sm text-gray-600 text-xs sm:text-sm leading-relaxed">
+       <p class="font-semibold text-gray-900 text-sm mb-0.5">
+        Rajdeep
+       </p>
+       <p class="text-gray-500 text-xs mb-2">
+        Delhi
+       </p>
+       <p>
+        have purchased medicines from nearby chemist in the past and was
+             not really sure about whole online order process...tried pharmeasy
+             app and it was good experience with fast...
+       </p>
+      </div>
+      <div class="bg-white rounded-lg p-4 shadow-sm text-gray-600 text-xs sm:text-sm leading-relaxed">
+       <p class="font-semibold text-gray-900 text-sm mb-0.5">
+        Alina
+       </p>
+       <p class="text-gray-500 text-xs mb-2">
+        Bengaluru
+       </p>
+       <p>
+        My mothers daily medicine was not available in any of the chemist
+             shops near my home...had to search for them online and found it
+             available on...
+       </p>
+      </div>
+      <div class="bg-white rounded-lg p-4 shadow-sm text-gray-600 text-xs sm:text-sm leading-relaxed">
+       <p class="font-semibold text-gray-900 text-sm mb-0.5">
+        Rajesh
+       </p>
+       <p class="text-gray-500 text-xs mb-2">
+        Mumbai
+       </p>
+       <p>
+        I have been using pharmeasy app for sometime now for my family's
+             medicine needs. The order process is very simple and easy and the
+             discounts are...
+       </p>
+      </div>
+     </div>
+    </div>
+   </div>
+  
+
+ <!-- customer review end  -->
+
+ 
+
+
+
+
+     <!-- footer start -->
+
+  <footer class="bg-cyan-900 text-white mt-12">
+    <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      
+      <!-- Brand -->
+      <div>
+        <h2 class="text-2xl font-bold mb-2">Medicare Pharmacy</h2>
+        <p class="text-sm text-gray-400">Your trusted partner in health and wellness.</p>
+      </div>
+  
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-lg font-semibold mb-3">Quick Links</h3>
+        <ul class="space-y-2 text-sm text-gray-300">
+          <li><a href="./index.html" class="hover:text-white">Home</a></li>
+          <li><a href="#" class="hover:text-white">Shop</a></li>
+          <li><a href="./AboutUs.html" class="hover:text-white">About Us</a></li>
+          <li><a href="#" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Services -->
+      <div>
+        <h3 class="text-lg font-semibold mb-3">Services</h3>
+        <ul class="space-y-2 text-sm text-gray-300">
+          <li><a href="#" class="hover:text-white">Home Delivery</a></li>
+          <li><a href="#" class="hover:text-white">Lab Tests</a></li>
+          <li><a href="#" class="hover:text-white">Health Records</a></li>
+          <li><a href="#" class="hover:text-white">Support</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact Info -->
+      <div>
+        <h3 class="text-lg font-semibold mb-3">Contact</h3>
+        <p class="text-sm text-gray-300">123 Wellness Avenue<br> City, Country 12345</p>
+        <p class="text-sm text-gray-300 mt-2">Email: support@medicare.com</p>
+        <p class="text-sm text-gray-300">Phone: +1 (800) 123-4567</p>
+  
+        <!-- Social Icons -->
+        <div class="flex gap-4 mt-4">
+          <a href="#" class="hover:text-blue-400">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="hover:text-blue-400">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="hover:text-pink-400">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Bottom Bar -->
+    <div class="bg-gray-800 text-center py-4 text-sm text-gray-400">
+      &copy; 2025 Medicare Pharmacy. All rights reserved.
+    </div>
+  </footer>
+
+
+ 
+
+ 
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const faders = document.querySelectorAll('.fade-in');
+  
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // Remove observer after it becomes visible
+          }
+        });
+      }, { threshold: 0.2 });
+  
+      faders.forEach(el => observer.observe(el));
+    });
+  </script>
+  
+  <script src="./script.js"></script>
+</html>

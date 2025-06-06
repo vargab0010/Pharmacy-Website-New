@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Cart</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+  <h1 class="text-3xl font-bold mb-6 text-center">🛒 Your Shopping Cart</h1>
+  <div id="cart-items" class="space-y-6 max-w-4xl mx-auto"></div>
+
+  <div class="max-w-4xl mx-auto mt-8 text-right">
+    <p id="total-price" class="text-xl font-bold text-right mt-4 mb-2 text-gray-800"></p>
+    <button id="checkout-btn" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">
+      <i class="fa-solid fa-credit-card mr-2"></i>Buy Now
+    </button>
+  </div>
+
+  <script>
+  // ==================================================
+  // API Configuration
+  // ==================================================
+  const API_BASE = 'http://localhost:5000'; // Backend server address
+
+  // ==================================================
+  // Load cart function
+  // ==================================================
+  async function loadCart() {
+    try {
+      const userId = localStorage.getItem('userId');
+      if (!userId) {
+        window.location.href = '/login.html';
+        return;
+      }
+
+      // Use the correct API endpoint
+      const res = await fetch(`${API_BASE}/api/cart/${userId}`);
+      if (!res.ok) throw new Error('Failed to load cart');
+      
+      const cart = await res.json();
+      const container = document.getElementById('cart-items');
+      const totalDisplay = document.getElementById('total-price');
+
+      // Clear previous content
+      container.innerHTML = '';
+      
+      if (!cart || !cart.items || cart.items.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-8">
+            <p class="text-gray-600 text-lg">Your cart is empty</p>
+            <a href="/products.html" class="text-blue-600 hover:underline mt-2 inline-block">
+              Continue Shopping
+            </a>
+          </div>
+        `;
+        totalDisplay.innerText = '';
+        return;
+      }
+
+      let total = 0;
+      
+      cart.items.forEach(item => {
+        if (!item.productId) return; // Skip invalid items
+        
+        const product = item.productId;
+        const itemTotal = product.price * item.quantity;
+        total += itemTotal;
+
+        container.innerHTML += `
+          <div class="bg-white shadow rounded-lg p-4 flex items-center gap-6">
+            <img src="${product.imageUrl || '/placeholder-product.jpg'}" 
+                 class="w-24 h-24 object-cover rounded-lg">
+            <div class="flex-1">
+              <h2 class="text-lg font-bold">${product.name}</h2>
+              <p class="text-gray-600">Price: ₹${product.price.toFixed(2)}</p>
+              <div class="flex items-center mt-2">
+                <span class="text-sm text-gray-500 mr-4">Quantity: ${item.quantity}</span>
+              </div>
+            </div>
+            <button class="remove-item text-red-600 hover:text-red-800" 
+                    data-id="${product._id}">
+              Remove
+            </button>
+          </div>
+        `;
+      });
+
+      totalDisplay.innerText = `Total: ₹${total.toFixed(2)}`;
+    } catch (err) {
+      console.error('Cart load error:', err);
+      document.getElementById('cart-items').innerHTML = `
+        <div class="text-center text-red-500 py-8">
+          Failed to load cart. Please try again.
+        </div>
+      `;
+    }
+  }
+
+  // ==================================================
+  // Event listeners and initialization
+  // ==================================================
+  document.addEventListener('DOMContentLoaded', () => {
+    // Load cart on page load
+    loadCart();
+    
+    // Handle item removal
+    document.addEventListener('click', async (e) => {
+      if (e.target.classList.contains('remove-item')) {
+        const productId = e.target.getAttribute('data-id');
+        const userId = localStorage.getItem('userId');
+        
+        try {
+          // Use the correct API endpoint
+          await fetch(`${API_BASE}/api/cart/remove`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ userId, productId })
+          });
+          
+          // Reload cart after removal
+          loadCart();
+        } catch (error) {
+          console.error('Remove item error:', error);
+          alert('Failed to remove item');
+        }
+      }
+    });
+    
+    // Handle checkout
+    document.getElementById('checkout-btn').addEventListener('click', async () => {
+      try {
+        const userId = localStorage.getItem('userId');
+        // Use the correct API endpoint
+        const res = await fetch(`${API_BASE}/api/cart/${userId}`);
+        const cart = await res.json();
+
+        if (!cart || cart.items.length === 0) {
+          alert('🛒 Your cart is empty!');
+          return;
+        }
+
+        const items = cart.items.map(i => ({
+          productId: i.productId._id,
+          quantity: i.quantity
+        }));
+
+        const total = cart.items.reduce((sum, i) => sum + i.productId.price * i.quantity, 0);
+
+        // Use the correct API endpoint
+        const orderRes = await fetch(`${API_BASE}/api/orders/place`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ userId, items, total })
+        });
+
+        if (orderRes.ok) {
+          alert('✅ Order placed successfully!');
+          loadCart(); // clear cart visually
+        } else {
+          const errorData = await orderRes.json();
+          alert(errorData.error || 'Failed to checkout');
+        }
+      } catch (error) {
+        console.error('Checkout error:', error);
+        alert('Failed to complete checkout');
+      }
+    });
+  });
+  </script>
+</body>
+</html>

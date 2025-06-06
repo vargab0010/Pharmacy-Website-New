@@ -40,3 +40,22 @@ setInterval(autoSlide, 3000); // Change slide every 3 seconds
 function goToLoginPage() {
   window.location.href = "./login.html"; // Adjust the path if necessary
 }
+
+
+// Refer between login  & profile
+document.addEventListener('DOMContentLoaded', () => {
+    const isLoggedIn = localStorage.getItem('userId');
+
+    const authButtons = document.getElementById('auth-buttons');
+    const userButtons = document.getElementById('user-buttons');
+
+    if (isLoggedIn) {
+      authButtons.classList.add('hidden');
+      userButtons.classList.remove('hidden');
+    } else {
+      authButtons.classList.remove('hidden');
+      userButtons.classList.add('hidden');
+    }
+    });
+  
+ 

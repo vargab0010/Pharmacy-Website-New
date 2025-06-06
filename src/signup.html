@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
     <link rel="stylesheet" href="./login.css">
     <title>Medicare Pharmacy | Login</title>
 </head>
-<body class="m-0 p-0" style="background-image: url('./resource/login/signup_background.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
+
+<body class="m-0 p-0"
+    style="background-image: url('./resource/login/signup_background.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
 
     <!-- NAV BAR START -->
     <nav class="p-3 flex bg-cyan-900 justify-items-center items-center sticky top-0 z-50">
@@ -19,12 +22,12 @@
         <div id="nav-menue" class="hidden lg:flex gap-12">
             <a href="#services" class="font-medium hover:text-cyan-500 text-white">Services</a>
             <a href="#" class="font-medium hover:text-cyan-500 text-white">About Us</a>
-            <a href="#" class="font-medium hover:text-cyan-500 text-white">Contact</a>
+
             <a href="#" class="font-medium hover:text-cyan-500 text-white">Help</a>
             <a href="#" class="font-medium hover:text-cyan-500 text-white">Cart</a>
         </div>
 
-        
+
         <!-- <button class="hidden lg:flex gap-2 items-center border-2 border-gray-400 px-6 py-2 rounded-lg hover:border-gray-700">
             <i class="fa-solid fa-user" style="color: #ffffff;"></i>
             <span class="text-white">Login/Signup</span>
@@ -37,7 +40,7 @@
  -->
 
 
-        
+
     </nav>
     <!-- NAV BAR END -->
 
@@ -45,33 +48,46 @@
 
     <!-- signup Section Start -->
     <div class="flex items-center justify-center h-screen">
-        <div style="background-image: url('./resource/login/sign-upbox.jpg'); background-size: cover; background-repeat: no-repeat;" 
+        <div style="background-image: url('./resource/login/sign-upbox.jpg'); background-size: cover; background-repeat: no-repeat;"
             class="text-center border-2 border-solid-[rgba(171,110,110,0.244)] w-[450px] h-[600px] bg-white/80 rounded-xl shadow-lg p-6">
             <h1 class="text-2xl font-bold mb-4 text-[rgb(0,255,255)]">Sign Up in to Medicare Pharmacy</h1>
 
-            <form>
-                <input class=" w-[250px] h-[35px] p-3 mb-[20px] border-[1px] border-solid rounded-2xl focus:outline-none focus:ring-2 focus:ring-cyan-400 bg-white" type="text" required placeholder="Enter Your Email" name="Email">
+            <form id="signup-form">
+                <input id="email"
+                    class=" w-[250px] h-[35px] p-3 mb-[20px] border-[1px] border-solid rounded-2xl focus:outline-none focus:ring-2 focus:ring-cyan-400 bg-white"
+                    type="text" required placeholder="Enter Your Email" name="Email">
 
-                <input class="Username w-[250px] h-[35px] p-3 mb-[20px] border[1px]  rounded-2xl focus:outline-none focus:ring-2 focus:ring-cyan-400 bg-white " type="text" required placeholder="Enter Your Name" name="Username">
+                <input id="name"
+                    class="Username w-[250px] h-[35px] p-3 mb-[20px] border[1px]  rounded-2xl focus:outline-none focus:ring-2 focus:ring-cyan-400 bg-white "
+                    type="text" required placeholder="Enter Your Name" name="Username">
 
-                <input class="password w-[250px] h-[35px] p-3 mb-[20px] border[1px]  rounded-2xl focus:outline-none focus:ring-2 focus:ring-cyan-400 bg-white " type="password" required placeholder="Enter Your Password" name="password">
+                <input id="password"
+                    class="password w-[250px] h-[35px] p-3 mb-[20px] border[1px]  rounded-2xl focus:outline-none focus:ring-2 focus:ring-cyan-400 bg-white "
+                    type="password" required placeholder="Enter Your Password" name="password">
 
-                <input class="password w-[250px] h-[35px] p-3 mb-[20px] border[1px]  rounded-2xl focus:outline-none focus:ring-2 focus:ring-cyan-400 bg-white " type="password" required placeholder="Enter Your Confirm Password" name="password">
+                <input id="confirmPassword"
+                    class="password w-[250px] h-[35px] p-3 mb-[20px] border[1px]  rounded-2xl focus:outline-none focus:ring-2 focus:ring-cyan-400 bg-white "
+                    type="password" required placeholder="Enter Your Confirm Password" name="password">
 
-                <input class="Mobileno w-[250px] h-[35px] p-3 mb-[20px] border[1px]  rounded-2xl focus:outline-none focus:ring-2 focus:ring-cyan-400 bg-white " type="password" required placeholder="Enter Your Mobile No" name="Mobile-No">
+                <input id="phone"
+                    class="Mobileno w-[250px] h-[35px] p-3 mb-[20px] border[1px]  rounded-2xl focus:outline-none focus:ring-2 focus:ring-cyan-400 bg-white "
+                    type="password" required placeholder="Enter Your Mobile No" name="Mobile-No">
 
                 <div id="asb" class="flex items-center justify-center spa mb-4 mt-3 ">
                     <div class="flex items-center">
                         <input type="checkbox" id="remember" class="mr-2">
                         <label for="remember" class="text-white">Remember me</label>
                     </div>
-                    <a class="links text-[rgb(0,255,255)] hover:underline text-sm ml-4" href="#">Forgot password?</a>
+                    <!-- <a class="links text-[rgb(0,255,255)] hover:underline text-sm ml-4" href="#">Forgot password?</a> -->
                 </div>
 
 
-                <input class="login w-[150px] h[35px] bg-[rgb(0,255,255)] text-black py-2 rounded-2xl hover:bg-cyan-600 cursor-pointer" type="submit" value="Signup">
+                <input
+                    class="login w-[150px] h[35px] bg-[rgb(0,255,255)] text-black py-2 rounded-2xl hover:bg-cyan-600 cursor-pointer"
+                    type="submit" value="Signup">
 
-                <p class="text-white  mt-4">Already have an account ? <a class="links text-[rgb(0,255,255)] hover:underline ml-3" href="login.html">Login</a></p>
+                <p class="text-white  mt-4">Already have an account ? <a
+                        class="links text-[rgb(0,255,255)] hover:underline ml-3" href="login.html">Login</a></p>
             </form>
         </div>
     </div>
@@ -131,5 +147,42 @@
 </body>
 
 <script src="script.js"></script>
+
+<script>
+    document.getElementById('signup-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const res = await fetch('http://localhost:5000/api/auth/signup', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                password: document.getElementById('password').value,
+                confirmPassword: document.getElementById('confirmPassword').value
+            })
+        });
+
+        const data = await res.json();
+        if (res.ok) {
+            localStorage.setItem('token', data.token);
+
+            localStorage.setItem('userId', data.user._id);
+            localStorage.setItem('userName', data.user.name);
+            localStorage.setItem('userEmail', data.user.email);
+            localStorage.setItem('userPhone', data.user.phone);
+
+
+            alert('Signup successful!');
+            // ✅ Redirect to home page
+            window.location.href = 'index.html';
+
+        } else {
+            alert(data.msg || data.error);
+        }
+
+    });
+</script>
 
 </html>

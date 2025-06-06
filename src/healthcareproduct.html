@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="./output.css">
+  <title>PHARMACY WEBSITE</title>
+</head>
+
+<body class="m-0 p-0">
+
+  <!-- NAV BAR START -->
+  <nav class="p-3 flex bg-cyan-900 justify-between items-center position-sticky">
+    <a href="#" id="brand" class="flex gap-2 items-center">
+      <img class="object-cover w-12 h-12" src="./resource/home/logo.png" alt="Medicare Pharmacy logo">
+      <span class="text-lg font-medium font-display text-white">Medicare Pharmacy</span>
+    </a>
+
+    <div id="nav-menue" class="hidden lg:flex gap-12">
+      <a href="#services" class="font-medium hover:text-cyan-500 text-white ">Services</a>
+      <a href="#" class="font-medium hover:text-cyan-500 text-white">About Us</a>
+      <a href="#" class="font-medium hover:text-cyan-500 text-white">Contact</a>
+      <a href="#" class="font-medium hover:text-cyan-500 text-white">Help</a>
+      <a href="#" class="font-medium hover:text-cyan-500 text-white">Cart</a>
+    </div>
+
+    <button onclick="goToLoginPage()" class="hidden lg:flex gap-2 items-center border-2 border-gray-400 px-6 py-2 rounded-lg hover:border-gray-700">
+      <!-- <img class="object-cover w-5 h-5" src="./resource/account.png" alt="Account icon"> -->
+      <i class="fa-solid fa-user" style="color: #ffffff;"></i>
+      <span class="text-white">Login/Signup</span>
+      <i class="fa-solid fa-arrow-right text-white"></i>
+    </button>
+
+    <button class="p-2 lg:hidden" onclick="handleMenu()">
+      <i class="fa-solid fa-bars text-gray-600"></i>
+    </button>
+
+    <div id="nav-dialog" class="hidden fixed z-10 md:hidden bg-white inset-0 p-3">
+      <div class="flex justify-between">
+        <a href="#" id="brand-mobile" class="flex gap-2 items-center">
+          <img class="object-cover w-12 h-12" src="./resource/home/logo.png" alt="Medicare Pharmacy logo">
+          <span class="text-lg font-medium font-display text-white">Medicare Pharmacy</span>
+        </a>
+        <button class="p-2 md:hidden" onclick="handleMenu()">
+          <i class="fa-solid fa-xmark text-gray-600"></i>
+        </button>
+      </div>
+
+      <div class="mt-6 space-y-3">
+        <a href="#" class="font-medium p-3 hover:bg-gray-100 block rounded-lg text-white">Services</a>
+        <a href="#" class="font-medium p-3 hover:bg-gray-100 block rounded-lg text-white">About Us</a>
+        <a href="#" class="font-medium p-3 hover:bg-gray-100 block rounded-lg text-white">Contact</a>
+        <a href="#" class="font-medium p-3 hover:bg-gray-100 block rounded-lg text-white">Help</a>
+        <a href="#" class="font-medium p-3 hover:bg-gray-100 block rounded-lg text-white">Cart</a>
+      </div>
+
+      <div class="h-px bg-gray-300 my-4"></div>
+
+      <button onclick="goToLoginPage()"  class="w-full flex gap-2 items-center px-6 py-2 rounded-lg hover:bg-gray-100">
+        <img class="object-cover w-5 h-5" src="./resource/home/account.png" alt="Account icon">
+        <span class=" text-white">Login/Signup</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Search Bar -->
+  <div class="relative w-full h-32 flex items-center justify-center bg-gray-900">
+    <img alt="Search background" class="absolute inset-0 w-full h-full object-cover opacity-50" src="./resource/home/seracbar image.jpg" />
+    <div class="relative z-10 text-white text-center">
+      <h1 class="text-xl font-semibold">Search Medicines / General Products</h1>
+      <div class="relative w-full max-w-sm mt-4">
+        <input  id="searchInput" type="text" placeholder="Search...Medicines" class="w-full pl-10 pr-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-gray-600" />
+        <div class="absolute left-3 top-1/2 transform -translate-y-1/2 text-white">
+          <i class="fas fa-search"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!DOCTYPE html>
+   <html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="./output.css">
+  <title>Healthcare Products</title>
+</head>
+
+<body class="m-0 p-0 bg-gray-100">
+
+  <!-- Header -->
+  <header class="bg-cyan-900 text-white p-4">
+    <h1 class="text-3xl font-bold text-center">Healthcare Products</h1>
+  </header>
+
+  <!-- Kids Section -->
+  <section class="container mx-auto p-6">
+    <h2 class="text-2xl font-bold text-blue-600 mb-6">For Kids (0-12 years)</h2>
+
+    <!-- Product 1 -->
+
+<div id="kids-products" class="space-y-6"></div>
+
+   
+  </section>
+
+  <!-- Adults Section -->
+  <section class="container mx-auto p-6">
+    <h2 class="text-2xl font-bold text-blue-600 mb-6">For Adults (13-50 years)</h2>
+    <!-- Product 1 -->
+    
+    <div id="adults-products" class="space-y-6"></div>
+
+    
+       
+  </section>
+
+  <!-- Seniors Section -->
+  <section class="container mx-auto p-6">
+    <h2 class="text-2xl font-bold text-blue-600 mb-6">For Seniors (50+ years)</h2>
+    <!-- Product 1 -->
+    
+    <div id="seniors-products" class="space-y-6"></div>
+    
+     
+
+      <!-- GeneraSection -->
+  <section class="container mx-auto p-6">
+    <h2 class="text-2xl font-bold text-blue-600 mb-6"> General Section</h2>
+
+      <!-- Product 1 -->
+    
+      <div id="general-products" class="space-y-6"></div>
+      
+
+
+
+
+  </section>
+
+
+ 
+ <!-- footer start -->
+
+ <footer class="bg-cyan-900 text-white mt-12">
+    <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      
+      <!-- Brand -->
+      <div>
+        <h2 class="text-2xl font-bold mb-2">Medicare Pharmacy</h2>
+        <p class="text-sm text-gray-400">Your trusted partner in health and wellness.</p>
+      </div>
+  
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-lg font-semibold mb-3">Quick Links</h3>
+        <ul class="space-y-2 text-sm text-gray-300">
+          <li><a href="#" class="hover:text-white">Home</a></li>
+          <li><a href="#" class="hover:text-white">Shop</a></li>
+          <li><a href="#" class="hover:text-white">About Us</a></li>
+          <li><a href="#" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Services -->
+      <div>
+        <h3 class="text-lg font-semibold mb-3">Services</h3>
+        <ul class="space-y-2 text-sm text-gray-300">
+          <li><a href="#" class="hover:text-white">Home Delivery</a></li>
+          <li><a href="#" class="hover:text-white">Lab Tests</a></li>
+          <li><a href="#" class="hover:text-white">Health Records</a></li>
+          <li><a href="#" class="hover:text-white">Support</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact Info -->
+      <div>
+        <h3 class="text-lg font-semibold mb-3">Contact</h3>
+        <p class="text-sm text-gray-300">123 Wellness Avenue<br> City, Country 12345</p>
+        <p class="text-sm text-gray-300 mt-2">Email: support@medicare.com</p>
+        <p class="text-sm text-gray-300">Phone: +1 (800) 123-4567</p>
+  
+        <!-- Social Icons -->
+        <div class="flex gap-4 mt-4">
+          <a href="#" class="hover:text-blue-400">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="hover:text-blue-400">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="hover:text-pink-400">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Bottom Bar -->
+    <div class="bg-gray-800 text-center py-4 text-sm text-gray-400">
+      &copy; 2025 Medicare Pharmacy. All rights reserved.
+    </div>
+  </footer>
+  
+
+
+ 
+</body>
+<script src="script.js"></script>
+<script src="medical.js"></script>
+</html>
