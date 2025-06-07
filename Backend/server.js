@@ -54,7 +54,7 @@ app.use('/api/cart', require('./routes/cart'));
 
 app.use('/api/orders', require('./routes/order'));
 
-app.use('/api/users', require('./routes/user'));
+app.use('/api/users', require('./routes/User'));
 
 
 
