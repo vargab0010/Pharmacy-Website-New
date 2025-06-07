@@ -56,6 +56,11 @@ app.use('/api/orders', require('./routes/order'));
 
 app.use('/api/users', require('./routes/User'));
 
+// 👇 Add this route
+app.get("/", (req, res) => {
+  res.send("Backend is running! 🚀");
+});
+
 
 
 
