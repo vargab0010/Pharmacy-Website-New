@@ -56,13 +56,6 @@ app.use('/api/orders', require('./routes/order'));
 
 app.use('/api/users', require('./routes/user'));
 
-// for versel
-app.get('/', (req, res) => {
-  res.send({
-    activeStatus: true,
-    error:false,
-  });
-});
 
 
 
