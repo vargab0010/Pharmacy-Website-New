@@ -59,3 +59,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   
  
+   // Correct (works with live backend)
+fetch("https://pharmacy-website-new-backend.onrender.com/api/products")
+  .then(response => response.json())
+  .then(data => {
+    console.log("Fetched Products:", data);
+    // You can now show them on the page
+  })
+  .catch(error => {
+    console.error("Error fetching products:", error);
+  });
