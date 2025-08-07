@@ -88,3 +88,10 @@ Pharmacy-Website/
    ```
    cd Pharmacy-Website/Backend
    npm install
+4. **Create a .env file**
+   ```
+   MONGO_URI=your_mongodb_uri
+   JWT_SECRET=your_jwt_secret
+   EMAIL_USER=your_email@example.com
+   EMAIL_PASS=your_email_password_or_app_password
+
