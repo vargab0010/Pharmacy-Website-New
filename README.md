@@ -76,8 +76,10 @@ Pharmacy-Website/
 ## 🚀 Getting Started Locally
 
 1. **Clone the repository**
-   ```bash
+   ```
    git clone https://github.com/your-username/Pharmacy-Website.git
 
+2.**Install Backend Dependencies**
+```
 cd Pharmacy-Website/Backend
 npm install
