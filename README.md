@@ -94,4 +94,21 @@ Pharmacy-Website/
    JWT_SECRET=your_jwt_secret
    EMAIL_USER=your_email@example.com
    EMAIL_PASS=your_email_password_or_app_password
+5. **Run Backend Server**
+   ```
+   
+    node server.js
+---
+## 📬 Contact
+
+Created by **Vargab Banerjee**  
+📧 Email: [vargabbanerjee581@gmail.com](vargabbanerjee581@gmail.com)
+
+---
+
+## ⭐️ Support
+
+If you found this project helpful, feel free to ⭐️ the repo and share it with others!  
+Your support helps keep the project growing 🙌
+
 
