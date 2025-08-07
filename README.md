@@ -79,7 +79,12 @@ Pharmacy-Website/
    ```
    git clone https://github.com/your-username/Pharmacy-Website.git
 
-2.**Install Backend Dependencies**
-```
-cd Pharmacy-Website/Backend
-npm install
+2. **Install Frontend Dependencies**
+   ```
+   cd Pharmacy-Website/Frontend
+   npm install
+
+3. **Install Backend Dependencies**
+   ```
+   cd Pharmacy-Website/Backend
+   npm install
